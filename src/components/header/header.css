@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 0 5rem 0 5rem;
+  background: black;
+  color: #fff;
+  line-height: 1.4;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header #right-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 260px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+header #right-header a {
+  text-decoration: none;
+  color: #eeeeee;
+}
+
+header #right-header a:hover {
+  color: #4f4cf0fb;
+}
+/*# sourceMappingURL=header.css.map */

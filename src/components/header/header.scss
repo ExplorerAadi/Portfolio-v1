@@ -1,0 +1,35 @@
+$primaryColor: #4f4cf0fb;
+$secondaryColor: #eeeeee;
+
+body {
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 0 5rem 0 5rem;
+    background: black;
+    color: #fff;
+    line-height: 1.4;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #right-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 260px;
+        font-weight: 600;
+        font-size: 18px;
+
+        a {
+            text-decoration: none;
+            color: $secondaryColor;
+        }
+        a:hover{
+            color: $primaryColor;
+        }
+    }
+}

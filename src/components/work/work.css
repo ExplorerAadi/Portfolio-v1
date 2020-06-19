@@ -1,0 +1,112 @@
+#sec-1 {
+  position: relative;
+  height: 100vh;
+}
+
+#sec-1 #left-sec-1 {
+  padding-top: 0.9rem;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+#sec-1 #left-sec-1 h1 span {
+  color: #4f4cf0fb;
+}
+
+#sec-1 #left-sec-1 button {
+  border-radius: 10px;
+  padding: 12px;
+  border-style: none;
+  background: #4f4cf0fb;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#sec-1 #left-sec-1 button:hover {
+  background: #fff;
+  color: #4f4cf0fb;
+  border: 2px solid #4f4cf0fb;
+}
+
+#sec-1 #right-sec-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 540px;
+}
+
+#sec-1 #right-sec-1 img {
+  width: 100%;
+}
+
+#sec-2 {
+  padding-top: 11rem;
+}
+
+.project-sec-leftImg, .project-sec-rightImg {
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project-sec-leftImg .project-img, .project-sec-rightImg .project-img {
+  width: 690px;
+}
+
+.project-sec-leftImg .project-img img, .project-sec-rightImg .project-img img {
+  width: 100%;
+}
+
+.project-sec-leftImg .project-content h2, .project-sec-rightImg .project-content h2 {
+  font-size: 3rem;
+}
+
+.project-sec-leftImg .project-content p, .project-sec-rightImg .project-content p {
+  margin-top: 0;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #999999;
+  letter-spacing: 0.011rem;
+}
+
+.project-sec-leftImg .project-content .project-btn a, .project-sec-rightImg .project-content .project-btn a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #999999;
+}
+
+#about #about-img {
+  width: 320px;
+}
+
+#about #about-img img {
+  width: 100%;
+}
+/*# sourceMappingURL=work.css.map */
