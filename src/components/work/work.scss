@@ -1,11 +1,12 @@
-$primaryColor: #4f4cf0fb;
+$primaryColor: #4f4cf0;
 $pColor: rgb(153, 153, 153);
+$hoverBG: rgba(79, 76, 240, 0.08);
 
-#sec-1 {
+#home {
     position: relative;
     height: 100vh;
 
-    #left-sec-1 {
+    #left-home {
         padding-top: 0.9rem;
         font-size: 3rem;
         font-weight: 900;
@@ -14,24 +15,23 @@ $pColor: rgb(153, 153, 153);
         h1 span {
             color: $primaryColor;
         }
-    
-        button {
-            border-radius: 10px;
-            padding: 12px;
-            border-style: none;
-            background: $primaryColor;
-            color: #fff;
-            font-size: 16px;
+        a {
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid $primaryColor;
+            padding: 10px 24px;
+            color: $primaryColor;
+            font-size: 1rem;
+            font-weight: 300;
+            background: black;
             cursor: pointer;
         }
-        button:hover {
-            background: #fff;
-            color: $primaryColor;
-            border: 2px solid $primaryColor;
+        a:hover {
+            background: $hoverBG;
         }
     }
     
-    #right-sec-1 {
+    #right-home {
         position: absolute;
         top: 0;
         right: 0;
@@ -39,69 +39,120 @@ $pColor: rgb(153, 153, 153);
     
         img {
             width: 100%;
-    
-
         }
     }
 }
 
-#sec-2 {
+#projects {
     padding-top: 11rem;
 }
+.section-break {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    color: $primaryColor;
 
-// .project-sec-leftImg {
-//     margin-left: -2.5rem;
-// }
-// .project-sec-rightImg {
-//     margin-right: -2.5rem;
-// }
+    #project-first-hr {
+        position: absolute;
+        left: 4%;
+        top: 42%;
+        width: 200px;
+    }
+    #project-second-hr {
+        position: absolute;
+        right: 4%;
+        top: 42%;
+        width: 200px;
+    }
+}
 
-.project-sec-leftImg, .project-sec-rightImg {
-    padding-top: 2rem;
+.section-fill-leftImg .project-img{
+    margin-left: -4rem;
+}
+.section-fill-rightImg .project-img{
+    margin-right: -3rem;
+}
+.project-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 11rem;
+    // justify-content: center;
+}
+
+.section-fill-leftImg, .section-fill-rightImg {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 
     .project-img {
-        width: 690px;
+        width: 760px;
+        height: 700px;
+        position: relative;
 
+        video {
+            position: absolute;
+            top: 29.2%;
+            left: 13.1%;
+            object-fit: fill;
+            // visibility: hidden;
+        }
         img {
             width: 100%;
+            margin-left: -2rem;
         }
     }
     .project-content {
+        position: relative;
+
         h2 {
             font-size: 3rem;
-            
+            line-height: 1.2;
+        
+            span{
+                color: $primaryColor;
+            }
         }
         p {
-            margin-top: 0;
+            margin: 0 0 2.5rem 0;
             font-size: 1.125rem;
-            font-weight: 300;
+            font-weight: 400;
             color: $pColor;
             letter-spacing: 0.011rem;
         }
-        .project-btn a {
+        .project-btn {
             display: flex;
             align-items: center;
-            // justify-content: space-between;
-        }
-    }
-}
+            justify-content: space-between;
+            width: 260px;
 
-#about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.125rem;
-    font-weight: 300;
-    color: $pColor;
 
-    #about-img {
-        width: 320px;
-
-        img {
-            width: 100%;
+            a#visit {
+                text-decoration: none;
+                border-radius: 8px;
+                border: 1px solid $primaryColor;
+                padding: 10px 46px 10px 24px;
+                color: $primaryColor;
+                font-size: 1rem;
+                font-weight: 300;
+                background: black url('../../media/redirect.png') 65px 13px no-repeat;
+                background-size: 14px 14px;
+                cursor: pointer;
+            }
+            a#github {
+                text-decoration: none;
+                border-radius: 8px;
+                border: 1px solid #fff;
+                padding: 10px 46px 10px 24px;
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 300;
+                background: $primaryColor url('../../media/gitWhite.png') 80px 12px no-repeat;
+                background-size: 15px 16px;
+                cursor: pointer;
+            }
         }
     }
 }

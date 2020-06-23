@@ -1,0 +1,72 @@
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 11rem;
+}
+
+#about-first-hr {
+  position: absolute;
+  left: 4%;
+  top: 42%;
+  width: 300px;
+}
+
+#about-second-hr {
+  position: absolute;
+  right: 4%;
+  top: 42%;
+  width: 300px;
+}
+
+.section-fill-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #999999;
+  width: 100%;
+}
+
+.section-fill-about #about-img {
+  width: 320px;
+}
+
+.section-fill-about #about-img img {
+  width: 100%;
+}
+
+.section-fill-about ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(140px, 240px))[2];
+      grid-template-columns: repeat(2, minmax(140px, 240px));
+  font-size: 1rem;
+  margin: 15px 0 0;
+  padding: 0;
+  font-weight: 900;
+}
+
+.section-fill-about ul li {
+  background: url("../../media/polygonBlue.png") 0 6px no-repeat;
+  background-size: 9px 10px;
+  display: inline-block;
+  list-style: none;
+  padding: 0 0 0 15px;
+  margin: 5px 0 0;
+}
+/*# sourceMappingURL=about.css.map */

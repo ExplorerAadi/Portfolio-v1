@@ -8,9 +8,9 @@ const Header = () => {
                 <h2>AR</h2>
             </div>
             <div id='right-header'>
-                <a href='#'>Work</a>
-                <a href='#'>About</a>
-                <a href='#'>Contact</a>
+                <a href='#projects'>Work</a>
+                <a href='#about'>About</a>
+                <a href='#contact'>Contact</a>
             </div>
         </header>
     );
