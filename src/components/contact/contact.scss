@@ -7,20 +7,27 @@ $hoverBG: rgba(79, 76, 240, 0.08);
     flex-direction: column;
     align-items: center;
     margin-top: 19rem;
-}
-.section-break {
-    #contact-first-hr {
-        position: absolute;
-        left: 4%;
-        top: 42%;
-        width: 300px;
-    }
-    #contact-second-hr {
-        position: absolute;
-        right: 4%;
-        top: 42%;
-        width: 300px;
-    }
+
+        h1::before {
+            content: ' ';
+            position: absolute;
+            top: 52%;
+            left: 17%;
+            transform: translate(-50%, -50%);
+            height: 2px;
+            width: 392px;
+            background-color: $pColor;
+        }
+        h1::after {
+            content: ' ';
+            position: absolute;
+            top: 52%;
+            left: 83%;
+            transform: translate(-50%, -50%);
+            height: 2px;
+            width: 392px;
+            background-color: $pColor;
+        }
 }
 .section-fill-contact {
     display: flex;
@@ -33,7 +40,7 @@ $hoverBG: rgba(79, 76, 240, 0.08);
         font-size: 1.125rem;
         font-weight: 400;
         color: $pColor;
-        margin: 0 0 3rem;
+        margin: 0 0 1.5rem;
     }
     #email{
         text-decoration: none;
@@ -54,7 +61,7 @@ $hoverBG: rgba(79, 76, 240, 0.08);
         align-items: center;
         justify-content: space-between;
         width: 300px;
-        padding: 2.5rem 2.5rem 8rem;
+        padding: 1.5rem 2.5rem 8rem;
 
         p a{
             text-decoration: none;

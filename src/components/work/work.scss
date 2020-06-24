@@ -7,8 +7,8 @@ $hoverBG: rgba(79, 76, 240, 0.08);
     height: 100vh;
 
     #left-home {
-        padding-top: 0.9rem;
-        font-size: 3rem;
+        padding-top: 3rem;
+        font-size: 2.8rem;
         font-weight: 900;
         line-height: 1;
     
@@ -33,9 +33,9 @@ $hoverBG: rgba(79, 76, 240, 0.08);
     
     #right-home {
         position: absolute;
-        top: 0;
+        top: -7%;
         right: 0;
-        max-width: 540px;
+        max-width: 590px;
     
         img {
             width: 100%;
@@ -43,35 +43,40 @@ $hoverBG: rgba(79, 76, 240, 0.08);
     }
 }
 
-#projects {
-    padding-top: 11rem;
-}
 .section-break {
     position: relative;
     width: 100%;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color: $primaryColor;
 
-    #project-first-hr {
+    h1::before {
+        content: ' ';
         position: absolute;
-        left: 4%;
-        top: 42%;
-        width: 200px;
+        top: 52%;
+        left: 13%;
+        transform: translate(-50%, -50%);
+        height: 2px;
+        width: 290px;
+        background-color: $pColor;
     }
-    #project-second-hr {
+    h1::after {
+        content: ' ';
         position: absolute;
-        right: 4%;
-        top: 42%;
-        width: 200px;
+        top: 52%;
+        left: 87%;
+        transform: translate(-50%, -50%);
+        height: 2px;
+        width: 290px;
+        background-color: $pColor;
     }
 }
 
 .section-fill-leftImg .project-img{
-    margin-left: -4rem;
+    margin: 3rem 0 0 -3rem;
 }
 .section-fill-rightImg .project-img{
-    margin-right: -3rem;
+    margin: 0 -3rem 0 0;
 }
 .project-section {
     display: flex;
@@ -88,35 +93,34 @@ $hoverBG: rgba(79, 76, 240, 0.08);
     width: 100%;
 
     .project-img {
-        width: 760px;
-        height: 700px;
+        width: 720px;
         position: relative;
 
         video {
             position: absolute;
-            top: 29.2%;
+            top: 9.8%;
             left: 13.1%;
             object-fit: fill;
             // visibility: hidden;
         }
         img {
             width: 100%;
-            margin-left: -2rem;
         }
     }
     .project-content {
         position: relative;
 
-        h2 {
-            font-size: 3rem;
+        h1 {
+            font-size: 2.5rem;
             line-height: 1.2;
+            margin-bottom: 0;
         
             span{
                 color: $primaryColor;
             }
         }
         p {
-            margin: 0 0 2.5rem 0;
+            margin: 1.25rem 0 2.1rem 0;
             font-size: 1.125rem;
             font-weight: 400;
             color: $pColor;
@@ -144,7 +148,6 @@ $hoverBG: rgba(79, 76, 240, 0.08);
             a#github {
                 text-decoration: none;
                 border-radius: 8px;
-                border: 1px solid #fff;
                 padding: 10px 46px 10px 24px;
                 color: #fff;
                 font-size: 1rem;

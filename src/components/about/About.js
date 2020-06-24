@@ -8,9 +8,7 @@ export class About extends Component {
         return (
             <section id='about'>
                 <div className='section-break'>
-                    <hr id='about-first-hr' />
                     <h1>About Me</h1>
-                    <hr id='about-second-hr' />
                 </div>
                 <div className='section-fill-about'>
                     <div id='about-content'>

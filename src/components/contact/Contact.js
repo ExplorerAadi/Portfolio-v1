@@ -6,9 +6,7 @@ export class Contact extends Component {
         return (
             <section id='contact'>
                 <div className='section-break'>
-                    <hr id='contact-first-hr' />
                     <h1>Get in Touch</h1>
-                    <hr id='contact-second-hr' />
                 </div>
                 <div className='section-fill-contact'>
                     <p>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./work.css";
 import boyPhone from "../../media/illustration.svg";
-import wrapsyImg from "../../media/lappyCut.png";
+import wrapsyImg from "../../media/lappyCut2.png";
 import WrapsyGif from "../../media/wrapsyGif.mp4";
 import About from "../about/About";
 import Contact from "../contact/Contact";
@@ -31,16 +31,14 @@ export class Work extends Component {
                 </section>
                 <section id='projects' className='project-section'>
                     <div className='section-break'>
-                        <hr id='project-first-hr' />
-                        <h2>Some Apps I've built</h2>
-                        <hr id='project-second-hr' />
+                        <h1>Some Apps I've built</h1>
                     </div>
                     <div className='section-fill-leftImg'>
                         <div className='project-img'>
                             <video
                                 src={WrapsyGif}
-                                width='500'
-                                height='308'
+                                width='535'
+                                height='328'
                                 loop
                                 autoPlay
                             >
@@ -49,10 +47,10 @@ export class Work extends Component {
                             <img src={wrapsyImg} alt='A Laptop mockup' />
                         </div>
                         <div className='project-content'>
-                            <h2>
+                            <h1>
                                 Wrapsy <span>-</span> Online <br />
                                 Gift store
-                            </h2>
+                            </h1>
                             <p>
                                 An E-commerce gift store built with React.js
                                 with all
