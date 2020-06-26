@@ -7,6 +7,12 @@ body {
   line-height: 1.4;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding: 0 1.25rem 0 1.25rem;
+  }
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,5 +47,16 @@ header #right-header a {
 
 header #right-header a:hover {
   color: #4f4cf0fb;
+}
+
+@media (max-width: 376px) {
+  header #right-header {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header #right-header a {
+    padding-left: 1.15rem;
+  }
 }
 /*# sourceMappingURL=header.css.map */

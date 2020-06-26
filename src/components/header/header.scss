@@ -1,6 +1,20 @@
 $primaryColor: #4f4cf0fb;
 $secondaryColor: #eeeeee;
 
+$ipad: 768px;
+$iphoneX: 376px;
+
+@mixin ipad {
+    @media (max-width: #{$ipad}) {
+        @content;
+    }
+}
+@mixin iphoneX {
+    @media (max-width: #{$iphoneX}) {
+        @content;
+    }
+}
+
 body {
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
@@ -8,6 +22,10 @@ body {
     background: black;
     color: #fff;
     line-height: 1.4;
+
+    @include ipad {
+        padding: 0 1.25rem 0 1.25rem;
+    }
 
 }
 
@@ -30,6 +48,16 @@ header {
         }
         a:hover{
             color: $primaryColor;
+        }
+    }
+
+    @include iphoneX {
+        #right-header {
+            justify-content: flex-end;
+
+            a {
+                padding-left: 1.15rem;
+            }
         }
     }
 }

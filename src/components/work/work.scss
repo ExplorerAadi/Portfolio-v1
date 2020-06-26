@@ -2,6 +2,20 @@ $primaryColor: #4f4cf0;
 $pColor: rgb(153, 153, 153);
 $hoverBG: rgba(79, 76, 240, 0.08);
 
+$ipad: 768px;
+$iphoneX: 375px;
+
+@mixin ipad {
+    @media (max-width: #{$ipad}) {
+        @content;
+    }
+}
+@mixin iphoneX {
+    @media (max-width: #{$iphoneX}) {
+        @content;
+    }
+}
+
 #home {
     position: relative;
     height: 100vh;
@@ -29,6 +43,15 @@ $hoverBG: rgba(79, 76, 240, 0.08);
         a:hover {
             background: $hoverBG;
         }
+
+        @include ipad {
+            font-size: 2.5rem;
+            padding-top: 12rem;
+        }
+        @include iphoneX {
+            font-size: 2rem;
+            padding-top: 7rem;
+        }
     }
     
     #right-home {
@@ -39,6 +62,10 @@ $hoverBG: rgba(79, 76, 240, 0.08);
     
         img {
             width: 100%;
+        }
+
+        @include ipad {
+            visibility: hidden;
         }
     }
 }
@@ -70,20 +97,70 @@ $hoverBG: rgba(79, 76, 240, 0.08);
         width: 290px;
         background-color: $pColor;
     }
+
+    @include ipad {
+        font-size: 2rem;
+
+        h1::before {
+            top: 52%;
+            left: 9%;
+            width: 102px;
+        }
+        h1::after {
+            top: 52%;
+            left: 91%;
+            width: 102px;
+        }
+    }
+    @include iphoneX {
+        font-size: 1.6rem;
+
+        h1::before {
+            top: 67%;
+            left: 22%;
+            width: 80px;
+        }
+        h1::after {
+            top: 67%;
+            left: 78%;
+            width: 80px;
+        }
+    }
 }
 
-.section-fill-leftImg .project-img{
-    margin: 3rem 0 0 -3rem;
+.section-fill-leftImg {
+    .project-img {
+        margin: 3rem 0 0 -3rem;
+    } 
+
+    @include ipad {
+        padding-top: 2rem;
+
+        .project-img {
+            margin: 1rem 0 0 -1rem;
+        }
+    }
+    @include iphoneX {
+        padding-top: 0;
+
+        .project-img {
+            margin: 4rem 0 0 -1rem;
+        }
+    }
 }
-.section-fill-rightImg .project-img{
-    margin: 0 -3rem 0 0;
-}
+// .section-fill-rightImg .project-img{
+//     margin: 0 -3rem 0 0;
+// }
 .project-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 11rem;
+    margin-top: 17rem;
     // justify-content: center;
+
+    @include ipad {
+        margin-top: 4rem;
+    }
 }
 
 .section-fill-leftImg, .section-fill-rightImg {
@@ -155,6 +232,44 @@ $hoverBG: rgba(79, 76, 240, 0.08);
                 background: $primaryColor url('../../media/gitWhite.png') 80px 12px no-repeat;
                 background-size: 15px 16px;
                 cursor: pointer;
+            }
+        }
+    }
+
+    @include ipad {
+        .project-img {
+            width: 600px;
+
+            video {
+                width: 290px;
+                height: 177px;
+            }
+        }
+        .project-content {
+            padding-left: 3rem;
+
+            h1 {
+                font-size: 2.3rem;
+            }
+        }
+    }
+    @include iphoneX {
+        flex-direction: column-reverse;
+
+        .project-img {
+            width: 340px;
+
+            video {
+                width: 252px;
+                height: 155px;
+            }
+        }
+
+        .project-content {
+            padding-left: 0;
+
+            h1 {
+                font-size: 1.8rem;
             }
         }
     }

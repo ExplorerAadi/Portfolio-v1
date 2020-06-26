@@ -2,11 +2,25 @@ $primaryColor: #4f4cf0;
 $pColor: rgb(153, 153, 153);
 $hoverBG: rgba(79, 76, 240, 0.08);
 
+$ipad: 768px;
+$iphoneX: 375px;
+
+@mixin ipad {
+    @media (max-width: #{$ipad}) {
+        @content;
+    }
+}
+@mixin iphoneX {
+    @media (max-width: #{$iphoneX}) {
+        @content;
+    }
+}
+
 #about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 11rem;
+    margin-top: 17rem;
 
     h1::before {
         content: ' ';
@@ -27,6 +41,27 @@ $hoverBG: rgba(79, 76, 240, 0.08);
         height: 2px;
         width: 434px;
         background-color: $pColor;
+    }
+
+    @include ipad {
+        h1::before {
+            left: 16%;
+            width: 230px;
+        }
+        h1::after {
+            left: 84%;
+            width: 230px;
+        }
+    }
+    @include iphoneX {
+        h1::before {
+            left: 10%;
+            width: 67px;
+        }
+        h1::after {
+            left: 89%;
+            width: 67px;
+        }
     }
 }
 .section-fill-about {
@@ -60,6 +95,22 @@ $hoverBG: rgba(79, 76, 240, 0.08);
             list-style: none;
             padding: 0 0 0 15px;
             margin: 5px 0 0;
+        }
+    }
+
+    @include ipad {
+        padding-top: 2rem;
+
+        #about-content {
+            padding-right: 2rem;
+        }
+    }
+    @include iphoneX {
+        flex-direction: column;
+        padding-top: 0;
+
+        #about-img {
+            padding-top: 4rem;
         }
     }
 }

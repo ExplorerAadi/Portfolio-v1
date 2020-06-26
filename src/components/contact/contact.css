@@ -9,7 +9,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 19rem;
+  margin-top: 17rem;
 }
 
 #contact h1::before {
@@ -34,6 +34,28 @@
   height: 2px;
   width: 392px;
   background-color: #999999;
+}
+
+@media (max-width: 768px) {
+  #contact h1::before {
+    left: 14%;
+    width: 198px;
+  }
+  #contact h1::after {
+    left: 86%;
+    width: 198px;
+  }
+}
+
+@media (max-width: 375px) {
+  #contact h1::before {
+    left: 7%;
+    width: 42px;
+  }
+  #contact h1::after {
+    left: 93%;
+    width: 42px;
+  }
 }
 
 .section-fill-contact {
@@ -102,5 +124,17 @@
 .section-fill-contact #footer {
   font-size: 1rem;
   font-weight: 300;
+}
+
+@media (max-width: 375px) {
+  .section-fill-contact {
+    width: 96%;
+  }
+  .section-fill-contact p {
+    margin-bottom: 1rem;
+  }
+  .section-fill-contact #social-media {
+    padding-top: 2rem;
+  }
 }
 /*# sourceMappingURL=contact.css.map */
