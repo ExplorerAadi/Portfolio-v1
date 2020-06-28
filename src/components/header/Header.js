@@ -58,9 +58,30 @@ class Header extends Component {
                                 this.toggleMenu(e);
                             }}
                         />
-                        <a href='#projects'>Work</a>
-                        <a href='#about'>About</a>
-                        <a href='#contact'>Contact</a>
+                        <a
+                            href='#projects'
+                            onClick={(e) => {
+                                this.toggleMenu(e);
+                            }}
+                        >
+                            Work
+                        </a>
+                        <a
+                            href='#about'
+                            onClick={(e) => {
+                                this.toggleMenu(e);
+                            }}
+                        >
+                            About
+                        </a>
+                        <a
+                            href='#contact'
+                            onClick={(e) => {
+                                this.toggleMenu(e);
+                            }}
+                        >
+                            Contact
+                        </a>
                     </ul>
                 </div>
             </header>
