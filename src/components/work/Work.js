@@ -3,6 +3,8 @@ import "./work.css";
 import boyPhone from "../../media/illustration.svg";
 import wrapsyImg from "../../media/lappyCut2.png";
 import WrapsyGif from "../../media/wrapsyGif.mp4";
+import spotGif from "../../media/spotGif.mp4";
+import snakeGif from "../../media/snakeGame.mp4";
 import About from "../about/About";
 import Contact from "../contact/Contact";
 
@@ -33,7 +35,7 @@ export class Work extends Component {
                     <div className='section-break'>
                         <h1>Some Apps I've built</h1>
                     </div>
-                    <div className='section-fill-leftImg'>
+                    <div className='section-fill-leftImg first-project'>
                         <div className='project-img'>
                             <video
                                 src={WrapsyGif}
@@ -62,7 +64,7 @@ export class Work extends Component {
                             </p>
                             <div className='project-btn'>
                                 <a
-                                    id='visit'
+                                    className='visit'
                                     href='https://wrapsy.now.sh/'
                                     target='_blank'
                                     rel='noopener noreferrer'
@@ -81,52 +83,96 @@ export class Work extends Component {
                         </div>
                     </div>
 
-                    {/* <div className='section-fill-rightImg'>
+                    <div className='section-fill-rightImg others'>
                         <div className='project-content'>
-                            <h2>
-                                Wrapsy - An Online <br />
-                                gift store
-                            </h2>
+                            <h1>
+                                Spot <span>-</span> Mark your <br />
+                                favourite spots
+                            </h1>
                             <p>
-                                An E-commerce gift store built with React.js
-                                with all
-                                <br /> the required features from searching,
-                                filtering and sorting <br />
-                                products to adding them to a cart, setting
-                                quantities
-                                <br /> and so on.
+                                Spot is a geolocation bookmark app that lets you
+                                <br /> mark your favourite spots on the map as
+                                you visit them and <br />
+                                let you save them incase if you decide to visit
+                                them later.
                             </p>
                             <div className='project-btn'>
-                                <a>View</a>
+                                <a
+                                    className='visit'
+                                    href='https://stop-n-spot.herokuapp.com/'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    Visit
+                                </a>
+                                <a
+                                    id='github'
+                                    href='https://github.com/Aadi-27/secondapp-frontend'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    Github
+                                </a>
                             </div>
                         </div>
                         <div className='project-img'>
-                            <img src={wrapsyImg} alt='Project Image' />
+                            <video
+                                src={spotGif}
+                                width='535'
+                                height='328'
+                                loop
+                                autoPlay
+                            >
+                                Your browser does not support the video tag
+                            </video>
+                            <img src={wrapsyImg} alt='A Laptop mockup' />
                         </div>
                     </div>
-                    <div className='section-fill-leftImg'>
+
+                    <div className='section-fill-leftImg others'>
                         <div className='project-img'>
-                            <img src={wrapsyImg} alt='Project Image' />
+                            <video
+                                src={snakeGif}
+                                width='535'
+                                height='328'
+                                loop
+                                autoPlay
+                            >
+                                Your browser does not support the video tag
+                            </video>
+                            <img src={wrapsyImg} alt='A Laptop mockup' />
                         </div>
                         <div className='project-content'>
-                            <h2>
-                                Wrapsy - An Online <br />
-                                gift store
-                            </h2>
+                            <h1>
+                                Snake Rumble <span>-</span> Multiplayer <br />
+                                Snake Battle
+                            </h1>
                             <p>
-                                An E-commerce gift store built with React.js
-                                with all
-                                <br /> the required features from searching,
-                                filtering and sorting <br />
-                                products to adding them to a cart, setting
-                                quantities
-                                <br /> and so on.
+                                A Multiplayer Snake Game that takes the famous
+                                snake game <br />
+                                of 90s to a next level and lets you play catch
+                                and win <br />
+                                with your opponents snake before timer runs out.
                             </p>
                             <div className='project-btn'>
-                                <a>View</a>
+                                <a
+                                    className='visit'
+                                    id='disable'
+                                    href='https://github.com/Aadi-27/multiplayerSnakeGame'
+                                >
+                                    In Progress
+                                </a>
+                                <a
+                                    id='github'
+                                    href='https://github.com/Aadi-27/multiplayerSnakeGame'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    Github
+                                </a>
                             </div>
                         </div>
-                    </div> */}
+                    </div>
                 </section>
                 <About />
                 <Contact />

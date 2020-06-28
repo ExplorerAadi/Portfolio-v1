@@ -3,7 +3,7 @@ $pColor: rgb(153, 153, 153);
 $hoverBG: rgba(79, 76, 240, 0.08);
 
 $ipad: 768px;
-$iphoneX: 375px;
+$iphoneX: 450px;
 
 @mixin ipad {
     @media (max-width: #{$ipad}) {

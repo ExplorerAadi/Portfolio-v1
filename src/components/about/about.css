@@ -47,7 +47,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   #about h1::before {
     left: 10%;
     width: 67px;
@@ -111,7 +111,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .section-fill-about {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

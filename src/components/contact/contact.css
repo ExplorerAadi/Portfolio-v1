@@ -47,7 +47,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   #contact h1::before {
     left: 7%;
     width: 42px;
@@ -126,7 +126,7 @@
   font-weight: 300;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
   .section-fill-contact {
     width: 96%;
   }

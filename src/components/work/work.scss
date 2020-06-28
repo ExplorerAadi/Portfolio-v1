@@ -1,9 +1,10 @@
 $primaryColor: #4f4cf0;
 $pColor: rgb(153, 153, 153);
 $hoverBG: rgba(79, 76, 240, 0.08);
+$bg: black;
 
 $ipad: 768px;
-$iphoneX: 375px;
+$iphoneX: 460px;
 
 @mixin ipad {
     @media (max-width: #{$ipad}) {
@@ -19,6 +20,7 @@ $iphoneX: 375px;
 #home {
     position: relative;
     height: 100vh;
+    margin-top: 5rem;
 
     #left-home {
         padding-top: 3rem;
@@ -37,7 +39,7 @@ $iphoneX: 375px;
             color: $primaryColor;
             font-size: 1rem;
             font-weight: 300;
-            background: black;
+            background: $bg;
             cursor: pointer;
         }
         a:hover {
@@ -130,7 +132,7 @@ $iphoneX: 375px;
 
 .section-fill-leftImg {
     .project-img {
-        margin: 3rem 0 0 -3rem;
+        margin: 3rem 0 0 -4rem;
     } 
 
     @include ipad {
@@ -141,16 +143,49 @@ $iphoneX: 375px;
         }
     }
     @include iphoneX {
+        flex-direction: column;
         padding-top: 0;
 
         .project-img {
-            margin: 4rem 0 0 -1rem;
+            margin: 2rem 0 1.5rem 0;
         }
     }
 }
-// .section-fill-rightImg .project-img{
-//     margin: 0 -3rem 0 0;
-// }
+.section-fill-rightImg {
+    .project-img {
+        margin: 3rem -4rem 0 0;
+    }
+
+    @include ipad {
+        padding-top: 2rem;
+
+        .project-img {
+            margin: 1rem -1rem 0 0;
+        }
+    }
+    @include iphoneX {
+        flex-direction: column-reverse;
+        padding-top: 0;
+
+        .project-img {
+            margin: 2rem 0 1.5rem 0;
+        }
+    }
+}
+
+.first-project {
+    margin-top: 2rem;
+
+    @include iphoneX {
+        .project-img {
+            margin-top: 2rem;
+        }
+    }
+}
+.others {
+    margin-top: 7rem;
+}
+
 .project-section {
     display: flex;
     flex-direction: column;
@@ -162,7 +197,6 @@ $iphoneX: 375px;
         margin-top: 4rem;
     }
 }
-
 .section-fill-leftImg, .section-fill-rightImg {
     display: flex;
     align-items: center;
@@ -210,7 +244,7 @@ $iphoneX: 375px;
             width: 260px;
 
 
-            a#visit {
+            a.visit {
                 text-decoration: none;
                 border-radius: 8px;
                 border: 1px solid $primaryColor;
@@ -218,9 +252,13 @@ $iphoneX: 375px;
                 color: $primaryColor;
                 font-size: 1rem;
                 font-weight: 300;
-                background: black url('../../media/redirect.png') 65px 13px no-repeat;
+                background: $bg url('../../media/redirect.png') 65px 13px no-repeat;
                 background-size: 14px 14px;
                 cursor: pointer;
+            }
+            a#disable {
+                padding: 10px 24px 10px 24px;
+                background: $bg;
             }
             a#github {
                 text-decoration: none;
@@ -254,7 +292,6 @@ $iphoneX: 375px;
         }
     }
     @include iphoneX {
-        flex-direction: column-reverse;
 
         .project-img {
             width: 340px;

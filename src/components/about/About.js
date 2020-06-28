@@ -13,8 +13,8 @@ export class About extends Component {
                 <div className='section-fill-about'>
                     <div id='about-content'>
                         <p>
-                            Hello! I'm Aditya, a Fullstack Web Developer based
-                            in Bangalore, India <br />
+                            Hello! I'm Aditya Raj, a Fullstack Web Developer
+                            based in Bangalore, India <br />
                             who loves to build scalable Web Apps with efficient
                             backends and <br />
                             clean User Interface using the latest web
