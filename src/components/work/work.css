@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #home {
   position: relative;
   height: 100vh;
@@ -23,7 +27,7 @@
   color: #4f4cf0;
   font-size: 1rem;
   font-weight: 300;
-  background: black;
+  background: #0a0a0a;
   cursor: pointer;
 }
 
@@ -71,7 +75,7 @@
 }
 
 .section-break h1::before {
-  content: ' ';
+  content: " ";
   position: absolute;
   top: 52%;
   left: 13%;
@@ -83,7 +87,7 @@
 }
 
 .section-break h1::after {
-  content: ' ';
+  content: " ";
   position: absolute;
   top: 52%;
   left: 87%;
@@ -212,7 +216,8 @@
   }
 }
 
-.section-fill-leftImg, .section-fill-rightImg {
+.section-fill-leftImg,
+.section-fill-rightImg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,12 +230,14 @@
   width: 100%;
 }
 
-.section-fill-leftImg .project-img, .section-fill-rightImg .project-img {
+.section-fill-leftImg .project-img,
+.section-fill-rightImg .project-img {
   width: 720px;
   position: relative;
 }
 
-.section-fill-leftImg .project-img video, .section-fill-rightImg .project-img video {
+.section-fill-leftImg .project-img video,
+.section-fill-rightImg .project-img video {
   position: absolute;
   top: 9.8%;
   left: 13.1%;
@@ -238,25 +245,31 @@
      object-fit: fill;
 }
 
-.section-fill-leftImg .project-img img, .section-fill-rightImg .project-img img {
+.section-fill-leftImg .project-img img,
+.section-fill-rightImg .project-img img {
   width: 100%;
 }
 
-.section-fill-leftImg .project-content, .section-fill-rightImg .project-content {
+.section-fill-leftImg .project-content,
+.section-fill-rightImg .project-content {
   position: relative;
+  color: #eee;
 }
 
-.section-fill-leftImg .project-content h1, .section-fill-rightImg .project-content h1 {
+.section-fill-leftImg .project-content h1,
+.section-fill-rightImg .project-content h1 {
   font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 0;
 }
 
-.section-fill-leftImg .project-content h1 span, .section-fill-rightImg .project-content h1 span {
+.section-fill-leftImg .project-content h1 span,
+.section-fill-rightImg .project-content h1 span {
   color: #4f4cf0;
 }
 
-.section-fill-leftImg .project-content p, .section-fill-rightImg .project-content p {
+.section-fill-leftImg .project-content p,
+.section-fill-rightImg .project-content p {
   margin: 1.25rem 0 2.1rem 0;
   font-size: 1.125rem;
   font-weight: 400;
@@ -264,7 +277,8 @@
   letter-spacing: 0.011rem;
 }
 
-.section-fill-leftImg .project-content .project-btn, .section-fill-rightImg .project-content .project-btn {
+.section-fill-leftImg .project-content .project-btn,
+.section-fill-rightImg .project-content .project-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,7 +291,8 @@
   width: 260px;
 }
 
-.section-fill-leftImg .project-content .project-btn a.visit, .section-fill-rightImg .project-content .project-btn a.visit {
+.section-fill-leftImg .project-content .project-btn a.visit,
+.section-fill-rightImg .project-content .project-btn a.visit {
   text-decoration: none;
   border-radius: 8px;
   border: 1px solid #4f4cf0;
@@ -285,17 +300,19 @@
   color: #4f4cf0;
   font-size: 1rem;
   font-weight: 300;
-  background: black url("../../media/redirect.png") 65px 13px no-repeat;
+  background: #0a0a0a url("../../media/redirect.png") 65px 13px no-repeat;
   background-size: 14px 14px;
   cursor: pointer;
 }
 
-.section-fill-leftImg .project-content .project-btn a#disable, .section-fill-rightImg .project-content .project-btn a#disable {
+.section-fill-leftImg .project-content .project-btn a#disable,
+.section-fill-rightImg .project-content .project-btn a#disable {
   padding: 10px 24px 10px 24px;
-  background: black;
+  background: #0a0a0a;
 }
 
-.section-fill-leftImg .project-content .project-btn a#github, .section-fill-rightImg .project-content .project-btn a#github {
+.section-fill-leftImg .project-content .project-btn a#github,
+.section-fill-rightImg .project-content .project-btn a#github {
   text-decoration: none;
   border-radius: 8px;
   padding: 10px 46px 10px 24px;
@@ -308,33 +325,41 @@
 }
 
 @media (max-width: 768px) {
-  .section-fill-leftImg .project-img, .section-fill-rightImg .project-img {
+  .section-fill-leftImg .project-img,
+  .section-fill-rightImg .project-img {
     width: 600px;
   }
-  .section-fill-leftImg .project-img video, .section-fill-rightImg .project-img video {
+  .section-fill-leftImg .project-img video,
+  .section-fill-rightImg .project-img video {
     width: 290px;
     height: 177px;
   }
-  .section-fill-leftImg .project-content, .section-fill-rightImg .project-content {
+  .section-fill-leftImg .project-content,
+  .section-fill-rightImg .project-content {
     padding-left: 3rem;
   }
-  .section-fill-leftImg .project-content h1, .section-fill-rightImg .project-content h1 {
+  .section-fill-leftImg .project-content h1,
+  .section-fill-rightImg .project-content h1 {
     font-size: 2.3rem;
   }
 }
 
 @media (max-width: 460px) {
-  .section-fill-leftImg .project-img, .section-fill-rightImg .project-img {
+  .section-fill-leftImg .project-img,
+  .section-fill-rightImg .project-img {
     width: 340px;
   }
-  .section-fill-leftImg .project-img video, .section-fill-rightImg .project-img video {
+  .section-fill-leftImg .project-img video,
+  .section-fill-rightImg .project-img video {
     width: 252px;
     height: 155px;
   }
-  .section-fill-leftImg .project-content, .section-fill-rightImg .project-content {
+  .section-fill-leftImg .project-content,
+  .section-fill-rightImg .project-content {
     padding-left: 0;
   }
-  .section-fill-leftImg .project-content h1, .section-fill-rightImg .project-content h1 {
+  .section-fill-leftImg .project-content h1,
+  .section-fill-rightImg .project-content h1 {
     font-size: 1.8rem;
   }
 }

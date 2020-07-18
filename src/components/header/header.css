@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   padding: 0 5rem 0 5rem;
-  background: black;
+  background: #0a0a0a;
   color: #fff;
   line-height: 1.4;
 }
@@ -19,10 +19,10 @@ header {
   left: 0;
   top: 0;
   z-index: 999;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   height: 80px;
-  background: black;
+  background: #0a0a0a;
 }
 
 header .navWrapper {
@@ -85,8 +85,8 @@ header ul {
 header ul a {
   text-decoration: none;
   color: #eeeeee;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 header ul a:hover {
@@ -94,13 +94,13 @@ header ul a:hover {
 }
 
 header .slideOut {
-  -webkit-animation: slideOut .4s ease-in-out forwards;
-          animation: slideOut .4s ease-in-out forwards;
+  -webkit-animation: slideOut 0.4s ease-in-out forwards;
+          animation: slideOut 0.4s ease-in-out forwards;
 }
 
 header .slideIn {
-  -webkit-animation: slideIn .4s ease-in-out forwards;
-          animation: slideIn .4s ease-in-out forwards;
+  -webkit-animation: slideIn 0.4s ease-in-out forwards;
+          animation: slideIn 0.4s ease-in-out forwards;
 }
 
 @-webkit-keyframes slideOut {
@@ -181,7 +181,7 @@ header .slideIn {
         -ms-flex-pack: center;
             justify-content: center;
     opacity: 0;
-    background: black;
+    background: #0a0a0a;
   }
   header .navWrapper ul a {
     margin: 1rem 0 0 !important;

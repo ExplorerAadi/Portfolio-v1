@@ -1,124 +1,125 @@
 $primaryColor: #4f4cf0;
 $pColor: rgb(153, 153, 153);
 $hoverBG: rgba(79, 76, 240, 0.08);
+$bg: #0a0a0a;
 
 $ipad: 768px;
 $iphoneX: 450px;
 
 @mixin ipad {
-    @media (max-width: #{$ipad}) {
-        @content;
-    }
+  @media (max-width: #{$ipad}) {
+    @content;
+  }
 }
 @mixin iphoneX {
-    @media (max-width: #{$iphoneX}) {
-        @content;
-    }
+  @media (max-width: #{$iphoneX}) {
+    @content;
+  }
 }
 
 #contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 17rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 17rem;
 
-        h1::before {
-            content: ' ';
-            position: absolute;
-            top: 52%;
-            left: 17%;
-            transform: translate(-50%, -50%);
-            height: 2px;
-            width: 392px;
-            background-color: $pColor;
-        }
-        h1::after {
-            content: ' ';
-            position: absolute;
-            top: 52%;
-            left: 83%;
-            transform: translate(-50%, -50%);
-            height: 2px;
-            width: 392px;
-            background-color: $pColor;
-        }
+  h1::before {
+    content: " ";
+    position: absolute;
+    top: 52%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 392px;
+    background-color: $pColor;
+  }
+  h1::after {
+    content: " ";
+    position: absolute;
+    top: 52%;
+    left: 83%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 392px;
+    background-color: $pColor;
+  }
 
-        @include ipad {
-            h1::before {
-                left: 14%;
-                width: 198px;
-            }
-            h1::after {
-                left: 86%;
-                width: 198px;
-            }
-        }
-        @include iphoneX {
-            h1::before {
-                left: 7%;
-                width: 42px;
-            }
-            h1::after {
-                left: 93%;
-                width: 42px;
-            }
-        }
+  @include ipad {
+    h1::before {
+      left: 14%;
+      width: 198px;
+    }
+    h1::after {
+      left: 86%;
+      width: 198px;
+    }
+  }
+  @include iphoneX {
+    h1::before {
+      left: 7%;
+      width: 42px;
+    }
+    h1::after {
+      left: 93%;
+      width: 42px;
+    }
+  }
 }
 .section-fill-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: $pColor;
+    margin: 0 0 1.5rem;
+  }
+  #email {
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid $primaryColor;
+    padding: 8px 24px;
+    background: $bg;
+    color: $primaryColor;
+    font-weight: 300;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #email:hover {
+    background: $hoverBG;
+  }
+  #social-media {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 300px;
+    padding: 1.5rem 2.5rem 8rem;
+
+    p a {
+      text-decoration: none;
+      color: $pColor;
+    }
+    p a:hover {
+      color: $primaryColor;
+    }
+  }
+  #footer {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  @include iphoneX {
+    width: 96%;
 
     p {
-        text-align: center;
-        font-size: 1.125rem;
-        font-weight: 400;
-        color: $pColor;
-        margin: 0 0 1.5rem;
-    }
-    #email{
-        text-decoration: none;
-        border-radius: 8px;
-        border: 1px solid $primaryColor;
-        padding: 8px 24px;
-        background: black;
-        color: $primaryColor;
-        font-weight: 300;
-        font-size: 1rem;
-        cursor: pointer;
-    }
-    #email:hover {
-        background: $hoverBG;
+      margin-bottom: 1rem;
     }
     #social-media {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 300px;
-        padding: 1.5rem 2.5rem 8rem;
-
-        p a{
-            text-decoration: none;
-            color: $pColor;
-        }
-        p a:hover{
-            color: $primaryColor;
-        }
+      padding-top: 2rem;
     }
-    #footer {
-        font-size: 1rem;
-        font-weight: 300;
-    }
-
-    @include iphoneX {
-        width: 96%;
-
-        p {
-            margin-bottom: 1rem;
-        }
-        #social-media {
-            padding-top: 2rem;
-        }
-    }
+  }
 }

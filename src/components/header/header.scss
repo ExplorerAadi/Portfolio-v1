@@ -1,156 +1,155 @@
 $primaryColor: #4f4cf0fb;
 $secondaryColor: #eeeeee;
-$headerBG: rgb(0, 0, 0);
+$headerBG: #0a0a0a;
 
 $ipad: 768px;
 $iphoneX: 450px;
 
 @mixin ipad {
-    @media (max-width: #{$ipad}) {
-        @content;
-    }
+  @media (max-width: #{$ipad}) {
+    @content;
+  }
 }
 @mixin iphoneX {
-    @media (max-width: #{$iphoneX}) {
-        @content;
-    }
+  @media (max-width: #{$iphoneX}) {
+    @content;
+  }
 }
 
 body {
-    margin: 0;
-    font-family: 'Nunito Sans', sans-serif;
-    padding: 0 5rem 0 5rem;
-    background: black;
-    color: #fff;
-    line-height: 1.4;
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 0 5rem 0 5rem;
+  background: $headerBG;
+  color: #fff;
+  line-height: 1.4;
 
-    @include ipad {
-        padding: 0 1.25rem 0 1.25rem;
-    }
-
+  @include ipad {
+    padding: 0 1.25rem 0 1.25rem;
+  }
 }
 
 header {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 999;
-    transition: all .4s;
-    height: 80px;
-    background: $headerBG;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  transition: all 0.4s;
+  height: 80px;
+  background: $headerBG;
 
-    .navWrapper {
-        height: 100%;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  .navWrapper {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        img {
-            display: none;
-            width: 25px;
-        }
-        ul {
-            position: relative;
-            font-weight: 600;
-            font-size: 1.125rem;
-            height: 100%;
-            width: max-content;
-        }
-    }
-    .container {
-        margin: 0 auto;
-        width: 90%;
-    }
-    
     img {
-        width: 100%;
-        object-fit: fill;
-        object-position: center;
+      display: none;
+      width: 25px;
     }
-
     ul {
+      position: relative;
+      font-weight: 600;
+      font-size: 1.125rem;
+      height: 100%;
+      width: max-content;
+    }
+  }
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  img {
+    width: 100%;
+    object-fit: fill;
+    object-position: center;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 260px;
+    font-weight: 600;
+    font-size: 18px;
+
+    a {
+      text-decoration: none;
+      color: $secondaryColor;
+      transition: all 0.4s;
+    }
+    a:hover {
+      color: $primaryColor;
+    }
+  }
+  .slideOut {
+    animation: slideOut 0.4s ease-in-out forwards;
+  }
+  .slideIn {
+    animation: slideIn 0.4s ease-in-out forwards;
+  }
+  @keyframes slideOut {
+    0% {
+      display: block;
+      opacity: 1;
+      left: 0;
+    }
+    100% {
+      display: none;
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  @keyframes slideIn {
+    0% {
+      display: none;
+      opacity: 0;
+      left: 100%;
+    }
+    100% {
+      display: block;
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  @include ipad {
+    .navWrapper {
+      img {
+        cursor: pointer;
+        display: block;
+      }
+
+      ul {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
         display: flex;
+        padding: 0;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        min-width: 260px;
-        font-weight: 600;
-        font-size: 18px;
+        justify-content: center;
+        opacity: 0;
+        background: $headerBG;
 
         a {
-            text-decoration: none;
-            color: $secondaryColor;
-            transition: all .4s;
+          margin: 1rem 0 0 !important;
+          text-align: center !important;
+          font-size: 1.2rem;
         }
-        a:hover{
-            color: $primaryColor;
-        }
-    }
-    .slideOut {
-        animation: slideOut .4s ease-in-out forwards;
-    }
-    .slideIn {
-        animation: slideIn .4s ease-in-out forwards;
-    }
-    @keyframes slideOut {
-        0% {
-            display: block;
-            opacity: 1;
-            left: 0;
-        }
-        100% {
-            display: none;
-            opacity: 0;
-            left: 100%;
-        }
-    }
-    @keyframes slideIn {
-        0% {
-            display: none;
-            opacity: 0;
-            left: 100%;
-        }
-        100% {
-            display: block;
-            opacity: 1;
-            left: 0;
-        }
-    }
 
-    @include ipad {
-        .navWrapper {
-            img {
-                cursor: pointer;
-                display: block;
-            }
-
-            ul {
-                position: fixed;
-                top: 0;
-                left: 100%;
-                width: 100%;
-                height: 100vh;
-                display: flex;
-                padding: 0;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                opacity: 0;
-                background: $headerBG;
-
-                a {
-                    margin: 1rem 0 0 !important;
-                    text-align: center !important;
-                    font-size: 1.2rem;
-                }
-
-                img {
-                    position: absolute;
-                    top: 1%;
-                    right: 5%;
-                }
-            }
+        img {
+          position: absolute;
+          top: 1%;
+          right: 5%;
         }
+      }
     }
+  }
 }

@@ -13,7 +13,7 @@
 }
 
 #contact h1::before {
-  content: ' ';
+  content: " ";
   position: absolute;
   top: 52%;
   left: 17%;
@@ -25,7 +25,7 @@
 }
 
 #contact h1::after {
-  content: ' ';
+  content: " ";
   position: absolute;
   top: 52%;
   left: 83%;
@@ -87,7 +87,7 @@
   border-radius: 8px;
   border: 1px solid #4f4cf0;
   padding: 8px 24px;
-  background: black;
+  background: #0a0a0a;
   color: #4f4cf0;
   font-weight: 300;
   font-size: 1rem;
