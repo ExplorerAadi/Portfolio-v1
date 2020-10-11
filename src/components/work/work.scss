@@ -68,9 +68,9 @@ html {
     right: 0;
     max-width: 590px;
 
-    img {
-      width: 100%;
-    }
+    // img {
+    //   width: 100%;
+    // }
 
     @include ipad {
       visibility: hidden;
