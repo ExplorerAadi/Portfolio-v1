@@ -56,10 +56,6 @@ html {
   max-width: 590px;
 }
 
-#home #right-home img {
-  width: 100%;
-}
-
 @media (max-width: 768px) {
   #home #right-home {
     visibility: hidden;
