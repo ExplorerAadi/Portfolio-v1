@@ -11,6 +11,9 @@ export class About extends Component {
           <h1>About Me</h1>
         </div>
         <div className="section-fill-about">
+          <div id="about-img">
+            <img src={myPic} alt="The author" />
+          </div>
           <div id="about-content">
             <p>
               Hello! I'm Aditya Raj, a Fullstack Web Developer based in
@@ -22,7 +25,15 @@ export class About extends Component {
               After dropping out of college, I dived into Web Development and{" "}
               <br />
               have been working on real-world projects with amazing people since
-              then.
+              then
+              <br /> and share my learnings in my{" "}
+              <a
+                className="tech-blog-link"
+                href="https://blog.exploreraadi.com/"
+              >
+                Tech Blog
+              </a>
+              .
             </p>
             <p>Here are a few technologies I'm proficient in:</p>
             <ul>
@@ -33,9 +44,6 @@ export class About extends Component {
               <li>Node.js</li>
               <li>MongoDB</li>
             </ul>
-          </div>
-          <div id="about-img">
-            <img src={myPic} alt="The author" />
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-$primaryColor: #4f4cf0;
+$primaryColor: #6562fd;
 $pColor: rgb(153, 153, 153);
 $hoverBG: rgba(79, 76, 240, 0.08);
 
@@ -6,111 +6,114 @@ $ipad: 768px;
 $iphoneX: 450px;
 
 @mixin ipad {
-    @media (max-width: #{$ipad}) {
-        @content;
-    }
+  @media (max-width: #{$ipad}) {
+    @content;
+  }
 }
 @mixin iphoneX {
-    @media (max-width: #{$iphoneX}) {
-        @content;
-    }
+  @media (max-width: #{$iphoneX}) {
+    @content;
+  }
 }
 
 #about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 17rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 17rem;
 
+  h1::before {
+    content: " ";
+    position: absolute;
+    top: 52%;
+    left: 19%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 434px;
+    background-color: $pColor;
+  }
+  h1::after {
+    content: " ";
+    position: absolute;
+    top: 52%;
+    left: 81%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 434px;
+    background-color: $pColor;
+  }
+
+  @include ipad {
     h1::before {
-        content: ' ';
-        position: absolute;
-        top: 52%;
-        left: 19%;
-        transform: translate(-50%, -50%);
-        height: 2px;
-        width: 434px;
-        background-color: $pColor;
+      left: 16%;
+      width: 230px;
     }
     h1::after {
-        content: ' ';
-        position: absolute;
-        top: 52%;
-        left: 81%;
-        transform: translate(-50%, -50%);
-        height: 2px;
-        width: 434px;
-        background-color: $pColor;
+      left: 84%;
+      width: 230px;
     }
-
-    @include ipad {
-        h1::before {
-            left: 16%;
-            width: 230px;
-        }
-        h1::after {
-            left: 84%;
-            width: 230px;
-        }
+  }
+  @include iphoneX {
+    h1::before {
+      left: 10%;
+      width: 67px;
     }
-    @include iphoneX {
-        h1::before {
-            left: 10%;
-            width: 67px;
-        }
-        h1::after {
-            left: 89%;
-            width: 67px;
-        }
+    h1::after {
+      left: 89%;
+      width: 67px;
     }
+  }
+}
+.tech-blog-link {
+  color: $primaryColor;
 }
 .section-fill-about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.125rem;
-    font-weight: 400;
-    color: $pColor;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: $pColor;
+  width: 100%;
 
-    #about-img {
-        width: 320px;
+  #about-img {
+    width: 320px;
 
-        img {
-            width: 100%;
-        }
+    img {
+      width: 100%;
     }
-    ul {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(140px, 240px));
-        font-size: 1rem;
-        margin: 15px 0 0;
-        padding: 0;
-        font-weight: 900;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 240px));
+    font-size: 1rem;
+    margin: 15px 0 0;
+    padding: 0;
+    font-weight: 900;
 
-        li {
-            background: url('../../media/polygonBlue.png') 0 6px no-repeat;
-            background-size: 9px 10px;
-            display: inline-block;
-            list-style: none;
-            padding: 0 0 0 15px;
-            margin: 5px 0 0;
-        }
+    li {
+      background: url("../../media/polygonBlue.png") 0 6px no-repeat;
+      background-size: 9px 10px;
+      display: inline-block;
+      list-style: none;
+      padding: 0 0 0 15px;
+      margin: 5px 0 0;
     }
+  }
 
-    @include ipad {
-        padding-top: 2rem;
+  @include ipad {
+    padding-top: 2rem;
 
-        #about-content {
-            padding-right: 2rem;
-        }
+    #about-content {
+      padding-right: 2rem;
     }
-    @include iphoneX {
-        flex-direction: column;
-        padding-top: 0;
+  }
+  @include iphoneX {
+    flex-direction: column;
+    padding-top: 0;
 
-        #about-img {
-            padding-top: 4rem;
-        }
-    }
+    // #about-img {
+    //     padding-top: 4rem;
+    // }
+  }
 }

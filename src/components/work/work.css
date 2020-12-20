@@ -16,15 +16,15 @@ html {
 }
 
 #home #left-home h1 span {
-  color: #4f4cf0;
+  color: #6562fd;
 }
 
 #home #left-home a {
   text-decoration: none;
   border-radius: 8px;
-  border: 1px solid #4f4cf0;
+  border: 1px solid #6562fd;
   padding: 10px 24px;
-  color: #4f4cf0;
+  color: #6562fd;
   font-size: 1rem;
   font-weight: 300;
   background: #0a0a0a;
@@ -67,7 +67,7 @@ html {
   width: 100%;
   text-align: center;
   font-size: 2.3rem;
-  color: #4f4cf0;
+  color: #6562fd;
 }
 
 .section-break h1::before {
@@ -261,7 +261,7 @@ html {
 
 .section-fill-leftImg .project-content h1 span,
 .section-fill-rightImg .project-content h1 span {
-  color: #4f4cf0;
+  color: #6562fd;
 }
 
 .section-fill-leftImg .project-content p,
@@ -291,9 +291,9 @@ html {
 .section-fill-rightImg .project-content .project-btn a.visit {
   text-decoration: none;
   border-radius: 8px;
-  border: 1px solid #4f4cf0;
+  border: 1px solid #6562fd;
   padding: 10px 46px 10px 24px;
-  color: #4f4cf0;
+  color: #6562fd;
   font-size: 1rem;
   font-weight: 300;
   background: #0a0a0a url("../../media/redirect.png") 65px 13px no-repeat;
@@ -315,7 +315,7 @@ html {
   color: #fff;
   font-size: 1rem;
   font-weight: 300;
-  background: #4f4cf0 url("../../media/gitWhite.png") 80px 12px no-repeat;
+  background: #6562fd url("../../media/gitWhite.png") 80px 12px no-repeat;
   background-size: 15px 16px;
   cursor: pointer;
 }
