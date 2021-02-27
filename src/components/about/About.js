@@ -16,8 +16,8 @@ export class About extends Component {
           </div>
           <div id="about-content">
             <p>
-              Hello! I'm Aditya Raj, a Fullstack Web Developer based in
-              Bangalore, India <br />
+              Hello! I'm Aditya Raj, a Web Developer based in Bangalore, India{" "}
+              <br />
               with a love and passion for creating beautiful and smooth <br />{" "}
               User Experiences using the latest web technologies.
             </p>
@@ -25,8 +25,9 @@ export class About extends Component {
               After dropping out of college, I dived into Web Development and{" "}
               <br />
               have been working on real-world projects with amazing people since
-              then
-              <br /> and share my learnings in my{" "}
+              then.
+              <br /> Currently working at Lirisoft and building app for millions
+              of users <br /> while sharing my learnings in my{" "}
               <a
                 className="tech-blog-link"
                 href="https://blog.exploreraadi.com/"
@@ -41,7 +42,7 @@ export class About extends Component {
               <li>JavaScript</li>
               <li>TypeScript</li>
               <li>React.js</li>
-              <li>Node.js</li>
+              <li>Electron</li>
               <li>MongoDB</li>
             </ul>
           </div>

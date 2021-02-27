@@ -14,13 +14,13 @@ export class Contact extends Component {
             My inbox is always open whether it's for a potential client, <br />a
             recruiter or to simply drop for a chat.
           </p>
-          <a href="mailto:rajaditya27145@gmail.com" id="email">
+          <a href="mailto:hey@exploreraadi.com" id="email">
             Say Hi
           </a>
           <div id="social-media">
             <p>
               <a
-                href="https://www.instagram.com/thewhisperertalks/"
+                href="https://www.instagram.com/exploreraadi/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
