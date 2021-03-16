@@ -1,16 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "./components/header/Header";
 import Work from "./components/work/Work";
+import About from "../about/About";
+import Contact from "../contact/Contact";
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <Header />
-                <Work />
-            </div>
-        );
-    }
-}
+const App = () => {
+  return (
+    <div>
+      <Header />
+      <Intro />
+      <About />
+      <Contact />
+    </div>
+  );
+};
 
 export default App;
