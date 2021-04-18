@@ -1,0 +1,31 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "gif": "media/wrapsyGif.mp4",
+      "title": "Wrapsy",
+      "slogan": "Online Gift Store",
+      "desc": "An E-commerce gift store built with React.js with all the required features from searching, filtering and sorting products to adding them to a cart, setting quantities and so on.",
+      "liveLink": "https://wrapsy.now.sh/",
+      "githubLink": "https://github.com/Aadi-27/secondapp-frontend"
+    },
+    {
+      "id": 2,
+      "gif": "media/dropyGif.mp4",
+      "title": "Dropy",
+      "slogan": "React Library",
+      "desc": "Dropy is built using React and HTML5 Drag and Drop API. It lets developers add Drag & Drop feature into their projects with ease.",
+      "liveLink": "https://www.npmjs.com/package/dropy",
+      "githubLink": "https://github.com/Aadi-27/dropy"
+    },
+    {
+      "id": 3,
+      "gif": "media/spotGif.mp4",
+      "title": "Spot",
+      "slogan": "Mark your favourite spots",
+      "desc": "Spot is a geolocation bookmark app that lets you mark your favourite spots on the map as you visit them and let you save them incase if you decide to visit them later.",
+      "liveLink": "https://stop-n-spot.herokuapp.com/",
+      "githubLink": "https://github.com/Aadi-27/Spot-marker"
+    }
+  ]
+}

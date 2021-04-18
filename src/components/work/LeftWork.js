@@ -1,30 +1,51 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-const LeftWork = () => {
+const LeftWork = ({ id, title, slogan, gif, desc, liveLink, githubLink }) => {
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   return (
-    <div className="section-fill-leftImg first-project">
-      <div className="project-img">
-        <video src={WrapsyGif} width="535" height="328" loop autoPlay>
-          Your browser does not support the video tag
-        </video>
-        <img src={wrapsyImg} alt="A Laptop mockup" />
-      </div>
-      <div className="project-content">
+    <div
+      className={`section-fill-leftImg ${
+        id === 1 ? "first-project" : "others"
+      }`}
+      ref={ref}
+    >
+      <motion.div
+        className="project-img-container"
+        initial={{ x: -200, opacity: 0 }}
+        animate={inView ? { x: 0, opacity: 1 } : { x: -200, opacity: 0 }}
+        transition={{
+          duration: 0.9,
+          ease: "easeOut",
+        }}
+      >
+        <div className="project-img">
+          <video src={gif} loop autoPlay>
+            Your browser does not support the video tag
+          </video>
+          {/* <img src={wrapsyImg} alt="A Laptop mockup" /> */}
+        </div>
+      </motion.div>
+      <motion.div
+        className="project-content"
+        initial={{ x: 200, opacity: 0 }}
+        animate={inView ? { x: 0, opacity: 1 } : { x: 200, opacity: 0 }}
+        transition={{
+          delay: "0.3",
+          duration: 0.9,
+          ease: "easeOut",
+        }}
+      >
         <h1>
-          Wrapsy <span>-</span> Online <br />
-          Gift store
+          {title} <span>-</span> {slogan}
         </h1>
-        <p>
-          An E-commerce gift store built with React.js with all
-          <br /> the required features from searching, filtering and sorting{" "}
-          <br />
-          products to adding them to a cart, setting quantities
-          <br /> and so on.
-        </p>
+        <p>{desc}</p>
         <div className="project-btn">
           <a
             className="visit"
-            href="https://wrapsy.now.sh/"
+            href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -32,14 +53,14 @@ const LeftWork = () => {
           </a>
           <a
             id="github"
-            href="https://github.com/Aadi-27/secondapp-frontend"
+            href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
           >
             Github
           </a>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

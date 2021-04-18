@@ -1,23 +1,30 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-const RightWork = () => {
+const RightWork = ({ id, title, slogan, gif, desc, liveLink, githubLink }) => {
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   return (
-    <div className="section-fill-rightImg others">
-      <div className="project-content">
+    <div id={id} className="section-fill-rightImg others" ref={ref}>
+      <motion.div
+        className="project-content"
+        initial={{ x: -200, opacity: 0 }}
+        animate={inView ? { x: 0, opacity: 1 } : { x: -200, opacity: 0 }}
+        transition={{
+          delay: "0.3",
+          duration: 0.9,
+          ease: "easeOut",
+        }}
+      >
         <h1>
-          Spot <span>-</span> Mark your <br />
-          favourite spots
+          {title} <span>-</span> {slogan}
         </h1>
-        <p>
-          Spot is a geolocation bookmark app that lets you
-          <br /> mark your favourite spots on the map as you visit them and{" "}
-          <br />
-          let you save them incase if you decide to visit them later.
-        </p>
+        <p>{desc}</p>
         <div className="project-btn">
           <a
             className="visit"
-            href="https://stop-n-spot.herokuapp.com/"
+            href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -25,20 +32,29 @@ const RightWork = () => {
           </a>
           <a
             id="github"
-            href="https://github.com/Aadi-27/secondapp-frontend"
+            href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
           >
             Github
           </a>
         </div>
-      </div>
-      <div className="project-img">
-        <video src={spotGif} width="535" height="328" loop autoPlay>
-          Your browser does not support the video tag
-        </video>
-        <img src={wrapsyImg} alt="A Laptop mockup" />
-      </div>
+      </motion.div>
+      <motion.div
+        className="project-img-container"
+        initial={{ x: 200, opacity: 0 }}
+        animate={inView ? { x: 0, opacity: 1 } : { x: 200, opacity: 0 }}
+        transition={{
+          duration: 0.9,
+          ease: "easeOut",
+        }}
+      >
+        <div className="project-img">
+          <img src={gif} alt="dropy-screenshot" />
+          {/* Your browser does not support the video tag
+          </video> */}
+        </div>
+      </motion.div>
     </div>
   );
 };

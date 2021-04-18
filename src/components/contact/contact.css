@@ -85,10 +85,10 @@
 .section-fill-contact #email {
   text-decoration: none;
   border-radius: 8px;
-  border: 1px solid #4f4cf0;
+  border: 1px solid #6562fd;
   padding: 8px 24px;
   background: #0a0a0a;
-  color: #4f4cf0;
+  color: #6562fd;
   font-weight: 300;
   font-size: 1rem;
   cursor: pointer;
@@ -118,7 +118,7 @@
 }
 
 .section-fill-contact #social-media p a:hover {
-  color: #4f4cf0;
+  color: #6562fd;
 }
 
 .section-fill-contact #footer {
