@@ -1,55 +1,66 @@
-import React, { Component } from "react";
-import myPic from "../../media/profile.jpg";
+import React from "react";
 import "./about.css";
+import myPic from "../../media/me3.jpg";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 // import polygon from '../../media/polygonBlue.png'
 
-export class About extends Component {
-  render() {
-    return (
-      <section id="about">
-        <div className="section-break">
-          <h1>About Me</h1>
-        </div>
-        <div className="section-fill-about">
-          <div id="about-img">
-            <img src={myPic} alt="The author" />
-          </div>
-          <div id="about-content">
-            <p>
-              Hello! I'm Aditya Raj, a Web Developer based in Bangalore, India{" "}
-              <br />
-              with a love and passion for creating beautiful and smooth <br />{" "}
-              User Experiences using the latest web technologies.
-            </p>
-            <p>
-              After dropping out of college, I dived into Web Development and{" "}
-              <br />
-              have been working on real-world projects with amazing people since
-              then.
-              <br /> Currently working at Lirisoft and building app for millions
-              of users <br /> while sharing my learnings in my{" "}
-              <a
-                className="tech-blog-link"
-                href="https://blog.exploreraadi.com/"
-              >
-                Tech Blog
-              </a>
-              .
-            </p>
-            <p>Here are a few technologies I'm proficient in:</p>
-            <ul>
-              <li>HTML {"&"} (S)CSS</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>React.js</li>
-              <li>Electron</li>
-              <li>MongoDB</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    );
-  }
-}
+const About = () => {
+  const { ref, inView } = useInView({ triggerOnce: true });
+  return (
+    <section id="about">
+      <div className="section-break">
+        <h1>About Me</h1>
+      </div>
+      <div className="section-fill-about" ref={ref}>
+        <motion.div
+          id="about-img"
+          initial={{ x: -200, opacity: 0 }}
+          animate={inView ? { x: 0, opacity: 1 } : { x: -200, opacity: 0 }}
+          transition={{
+            duration: 0.9,
+            ease: "easeOut",
+          }}
+        >
+          <img src={myPic} alt="The author" />
+        </motion.div>
+        <motion.div
+          id="about-content"
+          initial={{ x: 200, opacity: 0 }}
+          animate={inView ? { x: 0, opacity: 1 } : { x: 200, opacity: 0 }}
+          transition={{
+            duration: 0.9,
+            ease: "easeOut",
+          }}
+        >
+          <p>
+            Hello! I'm Aditya Raj, a Web Developer based in Bangalore, India
+            with a love and passion for creating beautiful and smooth User
+            Experiences using the latest web technologies.
+          </p>
+          <p>
+            After dropping out of college, I dived into Web Development and have
+            been working on real-world projects with amazing people since then.
+            <br /> Currently working at Lirisoft and building app for millions
+            of users while sharing my learnings in my{" "}
+            <a className="tech-blog-link" href="https://blog.exploreraadi.com/">
+              Tech Blog
+            </a>
+            .
+          </p>
+          <p>Here are a few technologies I'm proficient in:</p>
+          <ul>
+            <li>HTML {"&"} (S)CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React.js</li>
+            <li>Electron</li>
+            <li>MongoDB</li>
+          </ul>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
 export default About;

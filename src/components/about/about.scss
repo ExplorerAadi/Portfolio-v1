@@ -69,8 +69,8 @@ $iphoneX: 450px;
 }
 .section-fill-about {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-evenly;
   font-size: 1.125rem;
   font-weight: 400;
   color: $pColor;
@@ -78,10 +78,14 @@ $iphoneX: 450px;
 
   #about-img {
     width: 320px;
+    margin-top: 18px;
 
     img {
       width: 100%;
     }
+  }
+  #about-content {
+    max-width: 500px;
   }
   ul {
     display: grid;
