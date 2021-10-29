@@ -41,8 +41,11 @@ const About = () => {
           <p>
             After dropping out of college, I dived into Web Development and have
             been working on real-world projects with amazing people since then.
-            <br /> Currently working at Lirisoft and building app for millions
-            of users while sharing my learnings in my{" "}
+            <br /> Currently working at 
+            <a className="tech-blog-link" href="https://www.useplaza.com/">
+              Plaza
+            </a>
+            and sharing all the learnings in my{" "}
             <a className="tech-blog-link" href="https://blog.exploreraadi.com/">
               Tech Blog
             </a>
@@ -54,8 +57,8 @@ const About = () => {
             <li>JavaScript</li>
             <li>TypeScript</li>
             <li>React.js</li>
+            <li>Next.js</li>
             <li>Electron</li>
-            <li>MongoDB</li>
           </ul>
         </motion.div>
       </div>
